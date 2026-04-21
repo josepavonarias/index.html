@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Comercial Lorena</title>
 
-    <!-- Google Analytics -->
-    <!-- PEGA AQUÍ TU CÓDIGO -->
+    <!-- Google Analytics (pega tu código aquí) -->
+    <!-- Ejemplo:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+    -->
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
