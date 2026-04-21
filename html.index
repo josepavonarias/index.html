@@ -3,21 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>Comercial Lorena</title>
+
+    <!-- Google Analytics (pega tu código aquí) -->
+    <!-- Ejemplo:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+    -->
+
+    <!-- Librería para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
 
     <h1>Comercial Lorena</h1>
-    <p>Bienvenidos a nuestra tienda</p>
+    <p>Bienvenidos a nuestra tienda online</p>
 
-    <h2>Productos</h2>
-    <ul>
-        <li>Celulares</li>
-        <li>Accesorios</li>
-        <li>Recargas</li>
-    </ul>
+    <div class="card">
+        <h2>Productos</h2>
+        <ul style="list-style:none;">
+            <li>📱 Celulares</li>
+            <li>🎧 Accesorios</li>
+            <li>💳 Recargas</li>
+        </ul>
+    </div>
 
-    <h2>Contacto</h2>
-    <p>WhatsApp: 8888-8888</p>
+    <div class="card">
+        <h2>Gráfico de visitas (Datos sintéticos)</h2>
+        <canvas id="grafico"></canvas>
+    </div>
+
+    <div class="card">
+        <h2>Contacto</h2>
+        <p>WhatsApp: 8888-8888</p>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('grafico');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Celulares', 'Accesorios', 'Recargas'],
+                datasets: [{
+                    label: 'Cantidad de visitas',
+                    data: [12, 8, 5],
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
 
 </body>
 </html>
